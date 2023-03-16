@@ -70,7 +70,7 @@ Example input/output:
 Enter amount: 100
 Enter original currency code: USD
 Enter desired currency code: EUR
-Result: 84.0 EUR
+Result: 84.00 EUR
 ```
 
 ```
@@ -85,5 +85,5 @@ Enter original currency code: USD
 Enter desired currency code: XYZ
 Invalid currency code. Please enter a valid currency code.
 Enter desired currency code: EUR
-Result: 42.0 EUR
+Result: 42.00 EUR
 ```

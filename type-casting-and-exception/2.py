@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import sys
 
 # Rates
 usd_rates = {
@@ -83,15 +84,26 @@ cny_rates = {
 
 # Accepted Currencies
 currencies = {
-    'USD': 'usd_rates',
-    'EUR': 'eur_rates',
-    'JPY': 'jpy_rates',
-    'GBP': 'gbp_rates',
-    'AUD': 'aud_rates',
-    'CAD': 'cad_rates',
-    'CHF': 'chf_rates',
-    'CNY': 'cny_rates'
+    'USD': usd_rates,
+    'EUR': eur_rates,
+    'JPY': jpy_rates,
+    'GBP': gbp_rates,
+    'AUD': aud_rates,
+    'CAD': cad_rates,
+    'CHF': chf_rates,
+    'CNY': cny_rates
 }
+
+
+# Error codes
+def error_code(type):
+    if type == 1:
+        return "Invalid input. Please enter a valid amount."
+    elif type == 2:
+        return "Invalid currency code. Please enter a valid currency code"
+    else:
+        return "Error"
+
 
 # Getting correct input
 while True:
@@ -102,7 +114,7 @@ while True:
         else:
             print("Invalid input. Please enter a valid amount.")
     except ValueError:
-        print("Invalid input. Please enter a valid amount.")
+        print(error_code(1))
 
 while True:
     try:
@@ -110,22 +122,25 @@ while True:
         if original_cur in currencies:
             break
         else:
-            print("Invalid currency code. Please enter a valid currency code")
+            print(error_code(2))
     except ValueError:
-        print("Invalid currency code. Please enter a valid currency code")
+        print(error_code(2))
 
 while True:
     try:
         desired_cur = str(input("Enter desired currency code: "))
         if desired_cur in currencies:
+            if desired_cur == original_cur:
+                result = amount
+                print("Result: {:0.2f} {}".format(result, desired_cur))
+                sys.exit(0)
             break
         else:
-            print("Invalid currency code. Please enter a valid currency code")
+            print(error_code(2))
     except ValueError:
-        print("Invalid currency code. Please enter a valid currency code")
+        print(error_code(2))
 
-target = globals()[currencies[original_cur]]
-rate = target[desired_cur]
+rate = currencies[original_cur][desired_cur]
 result = amount * rate
 
 print("Result: {:0.2f} {}".format(result, desired_cur))
