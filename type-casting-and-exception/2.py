@@ -128,4 +128,4 @@ target = globals()[currencies[original_cur]]
 rate = target[desired_cur]
 result = amount * rate
 
-print("Result: {} {}".format(result, desired_cur))
+print("Result: {:0.2f} {}".format(result, desired_cur))
