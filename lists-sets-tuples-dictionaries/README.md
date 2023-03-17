@@ -52,3 +52,39 @@ released: 1
 used: 1
 was: 1
 ```
+
+## Challenge 2
+Merge Dictionaries
+
+Write a Python function that takes two dictionaries as input and returns a new dictionary that contains all the key-value pairs from both input dictionaries. If the same key exists in both dictionaries, the value from the second dictionary should overwrite the value from the first dictionary.
+
+Function signature:
+```
+def merge_dicts(dict1: dict, dict2: dict) -> dict:
+    pass
+```
+
+Input
+```
+The input to the function merge_dicts will be two dictionaries, dict1 and dict2. The keys and values in the dictionaries can be of any data type.
+```
+
+Output
+```
+The output of the function merge_dicts will be a new dictionary that contains all the key-value pairs from both input dictionaries. If the same key exists in both dictionaries, the value from the second dictionary should overwrite the value from the first dictionary.
+```
+
+Example
+```
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+assert merge_dicts(dict1, dict2) == {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}
+assert merge_dicts(dict1, dict2) == {'a': 1, 'b': 3, 'c': 4}
+
+dict1 = {}
+dict2 = {'a': 1, 'b': 2}
+assert merge_dicts(dict1, dict2) == {'a': 1, 'b': 2}
+```
