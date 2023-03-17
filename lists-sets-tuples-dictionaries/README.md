@@ -88,3 +88,47 @@ dict1 = {}
 dict2 = {'a': 1, 'b': 2}
 assert merge_dicts(dict1, dict2) == {'a': 1, 'b': 2}
 ```
+
+## Challenge 3
+List Analysis
+
+Write a Python function that takes in a list of integers and returns a dictionary with the following key-value pairs:
+
+"even_sum": the sum of all even integers in the list  
+"odd_sum": the sum of all odd integers in the list  
+"unique_values": a set containing all unique integers in the list  
+
+Function signature:
+
+```
+def list_stats(lst: list) -> dict:
+    pass
+```
+
+Example:
+```
+lst = [1, 2, 3, 2, 4, 5, 6, 4, 7, 8, 9, 8, 10]
+result = list_stats(lst)
+print(result)  # {'even_sum': 34, 'odd_sum': 25, 'unique_values': {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}
+```
+
+Test case 1
+```
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+result = list_stats(lst)
+assert result == {'even_sum': 20, 'odd_sum': 25, 'unique_values': {1, 2, 3, 4, 5, 6, 7, 8, 9}}
+```
+
+Test case 2
+```
+lst = [2, 4, 6, 8]
+result = list_stats(lst)
+assert result == {'even_sum': 20, 'odd_sum': 0, 'unique_values': {2, 4, 6, 8}}
+```
+
+Test case 3
+```
+lst = [1, 3, 5, 7, 9]
+result = list_stats(lst)
+assert result == {'even_sum': 0, 'odd_sum': 25, 'unique_values': {1, 3, 5, 7, 9}}
+```
