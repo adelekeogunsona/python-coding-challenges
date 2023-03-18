@@ -4,21 +4,21 @@
 def sanitizer(my_string: str) -> str:
     result = ''
     for string in my_string:
-      letter = ord(string)
-      if letter in range(65, 91) or letter in range(97,123):
-        result += chr(letter).lower()
-      else:
-        continue
+        letter = ord(string)
+        if letter in range(65, 91) or letter in range(97,123):
+            result += chr(letter).lower()
+        else:
+            continue
     return result
     
 
 # check for palindrome
 def is_palindrome(my_string: str) -> str:
     if len(my_string) > 1:
-      clean_string = sanitizer(my_string)
-      reverse = clean_string[::-1]
-      if clean_string == reverse:
-        return True
+        clean_string = sanitizer(my_string)
+        reverse = clean_string[::-1]
+        if clean_string == reverse:
+            return True
     return False
 
 
