@@ -1,4 +1,4 @@
-### Challenge 1
+## Challenge 1
 
 Write a Python function that takes in a list of strings representing integers and returns the sum of those integers as an integer. If any of the strings in the list cannot be converted to an integer, return None.
 
