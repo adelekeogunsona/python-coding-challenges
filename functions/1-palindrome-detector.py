@@ -13,7 +13,7 @@ def sanitizer(my_string: str) -> str:
     
 
 # check for palindrome
-def is_palindrome(my_string: str) -> str:
+def is_palindrome(my_string: str) -> bool:
     if len(my_string) > 1:
         clean_string = sanitizer(my_string)
         reverse = clean_string[::-1]
