@@ -1,5 +1,8 @@
 # Python Coding Challenges
 
+## Functions
+1. [Palindrome Detector](functions/1-palindrome-detector.py)
+
 ## Type Casting and Exceptions
 1. [Sum of strings](type-casting-and-exception/1-sum-strings.py)
 2. [Currency converter](type-casting-and-exception/2-currency-converter.py)
