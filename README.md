@@ -1,5 +1,8 @@
 # Python Coding Challenges
 
+## Data Structures and Algorithms
+1. [Two Sum](data-structures-and-algorithms/1-two-sum.py)
+
 ## Functions
 1. [Palindrome Detector](functions/1-palindrome-detector.py)
 
