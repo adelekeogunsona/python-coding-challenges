@@ -104,3 +104,42 @@ assert car3.color == "Green"
 assert car3.get_description() == "2015 Ford Mustang, Green"
 ```
 
+## Challenge 3
+Create a class called "BankAccount" that has the following attributes:
+```
+account_number (integer)
+owner (string)
+balance (float)
+```
+
+The class should have the following methods:
+```
+init: Initializes the attributes of the bank account object
+
+deposit: Accepts a deposit amount (float) as input and adds it to the balance of the account
+
+withdraw: Accepts a withdrawal amount (float) as input and subtracts it from the balance of the account if the balance is sufficient. If the balance is not sufficient, the withdrawal should not be allowed and an error message should be printed.
+
+get_balance: Returns the current balance of the account
+
+transfer: Accepts a transfer amount (float) and a destination account (BankAccount object) as input, and transfers the amount from the current account to the destination account if the balance is sufficient. If the balance is not sufficient, the transfer should not be allowed and an error message should be printed.
+```
+
+Test Cases:
+```
+account1 = BankAccount(123456, "John Smith", 1000.0)
+account2 = BankAccount(987654, "Jane Doe", 500.0)
+
+account1.deposit(200.0)
+assert account1.get_balance() == 1200.0
+
+account1.withdraw(300.0)
+assert account1.get_balance() == 900.0
+
+account1.transfer(500.0, account2)
+assert account1.get_balance() == 400.0
+assert account2.get_balance() == 1000.0
+
+account1.withdraw(1000.0) # This should print an error message and not change the balance
+assert account1.get_balance() == 400.0
+```

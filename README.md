@@ -9,6 +9,7 @@
 ## Object Oriented Programming
 1. [Shapes](oop/1-shapes.py)
 2. [Cars](oop/2-cars.py)
+3. [Bank Account](oop/3-bank.py)
 
 ## Type Casting and Exceptions
 1. [Sum of strings](type-casting-and-exception/1-sum-strings.py)
