@@ -61,3 +61,46 @@ assert shape.get_area() == 0
 assert shape.get_perimeter() == 0
 ```
 
+## Challenge 2
+Create a class called "Car" that has the following attributes:
+```
+make (string)
+model (string)
+year (integer)
+color (string)
+mileage (float)
+```
+
+The class should have the following methods:
+```
+init: Initializes the attributes of the car object
+
+drive: Accepts a distance (float) as input and adds it to the mileage of the car
+
+get_description: Returns a string that describes the car (e.g. "2018 Toyota Camry, White")
+
+paint: Accepts a new color (string) as input and changes the color of the car
+```
+
+Test Cases:
+```
+car1 = Car("Toyota", "Camry", 2018, "White", 10000.5)
+car1.drive(100)
+assert car1.mileage == 10100.5
+assert car1.get_description() == "2018 Toyota Camry, White"
+```
+```
+car2 = Car("Honda", "Civic", 2020, "Black", 5000.2)
+car2.paint("Red")
+assert car2.color == "Red"
+assert car2.get_description() == "2020 Honda Civic, Red"
+```
+```
+car3 = Car("Ford", "Mustang", 2015, "Blue", 7500.7)
+car3.drive(500.3)
+car3.paint("Green")
+assert car3.mileage == 8001.0
+assert car3.color == "Green"
+assert car3.get_description() == "2015 Ford Mustang, Green"
+```
+
