@@ -143,3 +143,61 @@ assert account2.get_balance() == 1000.0
 account1.withdraw(1000.0) # This should print an error message and not change the balance
 assert account1.get_balance() == 400.0
 ```
+
+## Challenge 4
+Create a class called "Person" that has the following attributes:
+```
+name (string)
+id_number (integer)
+```
+
+The class should have the following methods:
+```
+init: Initializes the attributes of the person object
+```
+
+Create a class called "Student" that inherits from the "Person" class and has the following additional attributes:
+```
+courses (list of strings)
+grades (list of floats)
+```
+
+The class should have the following methods:
+```
+init: Initializes the attributes of the student object, including the inherited attributes from the Person class
+
+add_course_grade: Accepts a course name (string) and a grade (float) as input and adds them to the courses and grades lists of the student
+
+get_average_grade: Returns the average grade of the student across all courses. If the student has no grades, return 0.0.
+
+get_course_grade: Accepts a course name (string) as input and returns the grade of the corresponding course. If the course is not found, return None.
+
+get_courses: Returns a list of the courses taken by the student.
+```
+
+Test Cases:
+```
+person1 = Person("John Smith", 12345)
+
+assert person1.name == "John Smith"
+assert person1.id_number == 12345
+
+student1 = Student("Jane Doe", 67890)
+
+assert student1.name == "Jane Doe"
+assert student1.id_number == 67890
+assert student1.courses == []
+assert student1.grades == []
+
+student1.add_course_grade("Math", 85.0)
+student1.add_course_grade("English", 90.0)
+student1.add_course_grade("Science", 95.0)
+
+assert student1.get_average_grade() == 90.0
+assert student1.get_course_grade("Math") == 85.0
+assert student1.get_course_grade("History") is None
+assert student1.get_courses() == ["Math", "English", "Science"]
+
+student2 = Student("John Smith", 12345, ["History", "Art"], [92.0, 88.0])
+assert student2.get_average_grade() == 90.0
+```
