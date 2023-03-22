@@ -22,3 +22,25 @@ is_palindrome("A man, a plan, a canal, Panama!")
 # Returns True
 ```
 
+## Challenge 2
+**Email Search using Regex**
+
+Create a function that takes a string of text as input and returns a list of all the email addresses found in the text. The function should use regular expressions to identify valid email addresses.
+
+Function signature:
+```
+def find_emails(text: str) -> List[str]:
+```
+
+Test Cases:
+```
+text1 = "Please contact us at support@example.com for assistance."
+find_emails(text1) => ["support@example.com"]
+
+text2 = "The email addresses to contact us are info@example.com and help@example.com"
+find_emails(text2) => ["info@example.com", "help@example.com"]
+
+text3 = "Invalid emails such as user@.com and @example.com should not be matched."
+find_emails(text3) => []
+```
+

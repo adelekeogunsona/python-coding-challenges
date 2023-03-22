@@ -5,6 +5,7 @@
 
 ## Functions
 1. [Palindrome Detector](functions/1-palindrome-detector.py)
+2. [Email Regex Search](functions/2.email-search.py)
 
 ## Object Oriented Programming
 1. [Shapes](oop/1-shapes.py)
