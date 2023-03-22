@@ -11,6 +11,7 @@
 2. [Cars](oop/2-cars.py)
 3. [Bank Account](oop/3-bank.py)
 4. [Student and Grades](oop/4-students.py)
+5. [Natural Squares](oop/5-natural-squares.py)
 
 ## Type Casting and Exceptions
 1. [Sum of strings](type-casting-and-exception/1-sum-strings.py)

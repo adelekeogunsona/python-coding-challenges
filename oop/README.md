@@ -201,3 +201,38 @@ assert student1.get_courses() == ["Math", "English", "Science"]
 student2 = Student("John Smith", 12345, ["History", "Art"], [92.0, 88.0])
 assert student2.get_average_grade() == 90.0
 ```
+
+## Challenge 5
+
+__Natural Squares__ (Using Iterators)
+
+Create an iterator that returns the squares of the first n natural numbers.
+
+Define a class NaturalSquares that implements the iterator protocol.
+
+The __init__() method should initialize the current value to 1 and take an argument n that specifies the number of squares to generate.
+
+The __iter__() method should return the iterator object itself.
+
+The __next__() method should return the next square of the natural number. If the current value is greater than n, the StopIteration exception should be raised.
+Test your implementation using the test cases below.
+
+Test Case 1:
+
+```
+squares = NaturalSquares(5)
+assert list(squares) == [1, 4, 9, 16, 25]
+```
+
+Test Case 2
+```
+squares = NaturalSquares(10)
+assert list(squares) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
+
+Test Case 3
+```
+squares = NaturalSquares(0)
+assert list(squares) == []
+```
+
