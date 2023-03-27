@@ -2,6 +2,7 @@
 
 ## Data Structures and Algorithms
 1. [Two Sum](data-structures-and-algorithms/1-two-sum.py)
+2. [Linked List](data-structures-and-algorithms/2-linked-list.py)
 
 ## Functions
 1. [Palindrome Detector](functions/1-palindrome-detector.py)
