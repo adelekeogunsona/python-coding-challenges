@@ -23,3 +23,5 @@
 1. [Word Frequency Counter](lists-sets-tuples-dictionaries/1-word-frequency-counter.py)
 2. [Merge Dictionaries](lists-sets-tuples-dictionaries/2-merge-dictionaries.py)
 
+## Others
+1. [Rock, Paper, Scissors Game](others/1-rock-paper-scissors-game.py)
